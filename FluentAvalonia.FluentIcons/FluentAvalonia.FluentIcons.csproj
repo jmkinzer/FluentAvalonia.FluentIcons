@@ -1,9 +1,27 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFrameworks>netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        
+        <PackageId>FluentAvalonia.FluentIcons</PackageId>
+        <Description>Fluent UI System Icons for FluentAvalonia</Description>
+        <PackageTags>fluentavalonia</PackageTags>
+        <Title>FluentAvalonia.FluentIcons</Title>
+        <Authors>taj_ny</Authors>
+        <Copyright>Copyright (c) 2022 taj_ny</Copyright>
+        <PackageProjectUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</PackageProjectUrl>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</RepositoryUrl>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
 
     <ItemGroup>
