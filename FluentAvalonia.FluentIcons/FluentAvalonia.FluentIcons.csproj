@@ -16,6 +16,13 @@
         <PackageVersion>1.1.179</PackageVersion>
         <AssemblyVersion>1.1.179</AssemblyVersion>
         <FileVersion>1.1.179</FileVersion>
+        <DebugType>embedded</DebugType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
+        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -29,6 +36,10 @@
 
     <ItemGroup>
       <PackageReference Include="FluentAvaloniaUI" Version="1.4.1" />
+      <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
