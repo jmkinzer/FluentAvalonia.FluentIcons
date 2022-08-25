@@ -8,16 +8,15 @@ namespace FluentAvalonia.FluentIcons;
 
 public class FilledFluentIcon : PathIcon
 {
-    public static readonly StyledProperty<FilledFluentIconSymbol> IconProperty
-        = AvaloniaProperty.Register<RegularFluentIcon, FilledFluentIconSymbol>(nameof(Icon));
+    public static readonly StyledProperty<FilledFluentIconSymbol> IconProperty =
+        AvaloniaProperty.Register<RegularFluentIcon, FilledFluentIconSymbol>(nameof(Icon));
 
     private static readonly SKFont Font;
 
     static FilledFluentIcon()
     {
-        var assembly = Assembly.GetExecutingAssembly();
-        var stream =
-            assembly.GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Filled.ttf");
+        var stream = Assembly.GetExecutingAssembly()
+            .GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Filled.ttf");
         Font = SKTypeface.FromStream(stream).ToFont();
     }
 
@@ -33,7 +32,7 @@ public class FilledFluentIcon : PathIcon
 
         if (change.Property == IconProperty)
         {
-            Data  = PathGeometry.Parse(Font.GetGlyphPath(Font.GetGlyph((int)Icon)).ToSvgPathData());
+            Data = PathGeometry.Parse(Font.GetGlyphPath(Font.GetGlyph((int)Icon)).ToSvgPathData());
         }
     }
 }

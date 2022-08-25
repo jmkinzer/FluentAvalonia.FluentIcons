@@ -8,16 +8,16 @@ namespace FluentAvalonia.FluentIcons;
 
 public class RegularFluentIcon : PathIcon
 {
-    public static readonly StyledProperty<RegularFluentIconSymbol> IconProperty
-        = AvaloniaProperty.Register<RegularFluentIcon, RegularFluentIconSymbol>(nameof(Icon));
+    public static readonly StyledProperty<RegularFluentIconSymbol> IconProperty =
+        AvaloniaProperty.Register<RegularFluentIcon, RegularFluentIconSymbol>(nameof(Icon));
 
     private static readonly SKFont Font;
 
     static RegularFluentIcon()
     {
         var assembly = Assembly.GetExecutingAssembly();
-        var stream
-            = assembly.GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Regular.ttf");
+        var stream =
+            assembly.GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Regular.ttf");
         Font = SKTypeface.FromStream(stream).ToFont();
     }
 
