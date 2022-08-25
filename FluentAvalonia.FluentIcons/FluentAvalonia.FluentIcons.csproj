@@ -5,7 +5,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <LangVersion>10</LangVersion>
-        
+
         <PackageId>FluentAvalonia.FluentIcons</PackageId>
         <Description>Fluent UI System Icons for FluentAvalonia</Description>
         <PackageTags>fluentavalonia</PackageTags>
@@ -13,13 +13,16 @@
         <Authors>taj_ny</Authors>
         <Copyright>Copyright (c) 2022 taj_ny</Copyright>
         <PackageProjectUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</PackageProjectUrl>
+        <PackageVersion>1.1.179</PackageVersion>
+        <AssemblyVersion>1.1.179</AssemblyVersion>
+        <FileVersion>1.1.179</FileVersion>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</RepositoryUrl>
     </PropertyGroup>
-    
+
     <PropertyGroup>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
     </PropertyGroup>
