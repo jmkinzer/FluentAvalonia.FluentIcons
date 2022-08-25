@@ -9,7 +9,7 @@ namespace FluentAvalonia.FluentIcons;
 public class FilledFluentIcon : PathIcon
 {
     public static readonly StyledProperty<FilledFluentIconSymbol> IconProperty =
-        AvaloniaProperty.Register<RegularFluentIcon, FilledFluentIconSymbol>(nameof(Icon));
+        AvaloniaProperty.Register<FilledFluentIcon, FilledFluentIconSymbol>(nameof(Icon));
 
     private static readonly SKFont Font;
 
