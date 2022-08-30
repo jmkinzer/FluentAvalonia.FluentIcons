@@ -25,13 +25,13 @@ xmlns:ic="using:FluentAvalonia.FluentIcons"
         <ui:NavigationView.MenuItems>
             <ui:NavigationViewItem Content="Page 1">
                 <ui:NavigationViewItem.Icon>
-                    <ic:FilledFluentIcon Icon="Settings16"/>
+                    <ic:FluentIcon Icon="Settings16Filled"/>
                 </ui:NavigationViewItem.Icon>
             </ui:NavigationViewItem>
 
             <!-- The library also provides markup extensions to reduce boilerplate code -->
             <ui:NavigationViewItem Content="Page 2"
-                                   Icon="{ic:RegularFluentIcon Settings16}"/>
+                                   Icon="{ic:FluentIcon Settings16Regular}"/>
         </ui:NavigationView.MenuItems>
     </ui:NavigationView>
 </Window>
