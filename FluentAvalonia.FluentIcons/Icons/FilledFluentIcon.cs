@@ -1,24 +1,15 @@
-using System.Reflection;
 using Avalonia;
 using Avalonia.Media;
+using FluentAvalonia.FluentIcons.Helpers;
 using FluentAvalonia.UI.Controls;
-using SkiaSharp;
 
 namespace FluentAvalonia.FluentIcons;
 
+[Obsolete("Use FluentIcon instead. This will be removed when FluentAvalonia 2.0 is released.")]
 public class FilledFluentIcon : PathIcon
 {
     public static readonly StyledProperty<FilledFluentIconSymbol> IconProperty =
         AvaloniaProperty.Register<FilledFluentIcon, FilledFluentIconSymbol>(nameof(Icon));
-
-    private static readonly SKFont Font;
-
-    static FilledFluentIcon()
-    {
-        var stream = Assembly.GetExecutingAssembly()
-            .GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Filled.ttf");
-        Font = SKTypeface.FromStream(stream).ToFont();
-    }
 
     public FilledFluentIconSymbol Icon
     {
@@ -32,7 +23,8 @@ public class FilledFluentIcon : PathIcon
 
         if (change.Property == IconProperty)
         {
-            Data = PathGeometry.Parse(Font.GetGlyphPath(Font.GetGlyph((int)Icon)).ToSvgPathData());
+            var font = IconHelper.FilledFont;
+            Data = PathGeometry.Parse(font.GetGlyphPath(font.GetGlyph((int)Icon)).ToSvgPathData());
         }
     }
 }
