@@ -11,23 +11,24 @@ internal static class IconHelper
 
     static IconHelper()
     {
-        var assembly = Assembly.GetExecutingAssembly();
-        using var stream =
-            assembly.GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Regular.ttf");
-        RegularFont = SKTypeface.FromStream(stream).ToFont();
-
-        using var stream2 =
-            assembly.GetManifestResourceStream("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Filled.ttf");
-        FilledFont = SKTypeface.FromStream(stream2).ToFont();
+        RegularFont = LoadFont("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Regular.ttf");
+        FilledFont = LoadFont("FluentAvalonia.FluentIcons.Resources.FluentSystemIcons-Filled.ttf");
     }
 
     public static PathGeometry GetPathGeometryFromIcon(FluentIconSymbol icon)
     {
-        var font = icon.ToString().EndsWith("Regular") ? RegularFont : FilledFont;
+        var isRegular = icon.ToString().EndsWith("Regular");
+        var font = isRegular ? RegularFont : FilledFont;
 
         // Filled enums values are multiplied by 100 because ToString() doesn't work well when the enum has
         // duplicate values
-        var value = icon.ToString().EndsWith("Regular") ? (int)icon : (int)icon / 100;
+        var value = isRegular ? (int)icon : (int)icon / 100;
         return PathGeometry.Parse(font.GetGlyphPath(font.GetGlyph(value)).ToSvgPathData());
+    }
+
+    private static SKFont LoadFont(string resource)
+    {
+        using var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource)!;
+        return SKTypeface.FromStream(stream).ToFont();
     }
 }
