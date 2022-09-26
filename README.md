@@ -36,3 +36,18 @@ xmlns:ic="using:FluentAvalonia.FluentIcons"
     </ui:NavigationView>
 </Window>
 ```
+
+# Rendering
+The current approach for rendering icons is to take the glyph from the regular/filled font, extract the SVG path and put it into a PathIcon.
+
+The number in the ``FluentIconSymbol`` enum represents the size of the glyph in the font. It doesn't affect how big the icon will be (use the ``Width`` and ``Height`` properties for that), but it does affect how the icon is scaled, which is visible at lower sizes.
+
+This is how the regular settings icon looks in NavigationView.
+
+![image](https://user-images.githubusercontent.com/79316397/192348887-a3c14733-4072-4e3a-a1a1-b8975208e45e.png)
+
+The resizable font has the same problem, but if an icon looks bad, you can't choose another size, because there's only one.
+
+Using FontIcon is also not a good approach, as the icon is way too small and the scaling is different depending on the operating system. On Windows it looks normal, but on Linux it may look like this:
+
+![image](https://user-images.githubusercontent.com/79316397/192355518-cf749f59-715f-4470-9641-dc225b2c709e.png)
