@@ -13,9 +13,9 @@
         <Authors>taj_ny</Authors>
         <Copyright>Copyright (c) 2022 taj_ny</Copyright>
         <PackageProjectUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</PackageProjectUrl>
-        <PackageVersion>1.2.1</PackageVersion>
-        <AssemblyVersion>1.2.1</AssemblyVersion>
-        <FileVersion>1.2.1</FileVersion>
+        <PackageVersion>1.2.2</PackageVersion>
+        <AssemblyVersion>1.2.2</AssemblyVersion>
+        <FileVersion>1.2.2</FileVersion>
         <DebugType>embedded</DebugType>
     </PropertyGroup>
 
