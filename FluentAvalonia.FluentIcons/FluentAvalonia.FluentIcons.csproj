@@ -11,12 +11,13 @@
         <PackageTags>fluentavalonia</PackageTags>
         <Title>FluentAvalonia.FluentIcons</Title>
         <Authors>taj_ny</Authors>
-        <Copyright>Copyright (c) 2023 taj_ny</Copyright>
+        <Copyright>Copyright (c) 2020 Microsoft Corporation, Copyright (c) 2023 taj_ny</Copyright>
         <PackageProjectUrl>https://github.com/taj-ny/FluentAvalonia.FluentIcons</PackageProjectUrl>
         <PackageVersion>1.2.6</PackageVersion>
         <AssemblyVersion>1.2.6</AssemblyVersion>
         <FileVersion>1.2.6</FileVersion>
         <DebugType>embedded</DebugType>
+        <PackageReadmeFile>content/README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <PropertyGroup>
@@ -44,6 +45,15 @@
 
     <ItemGroup>
       <Folder Include="Enums" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="../LICENSE">
+            <IncludeInPackage>true</IncludeInPackage>
+        </Content>
+        <Content Include="../README.md">
+            <IncludeInPackage>true</IncludeInPackage>
+        </Content>
     </ItemGroup>
 
     <ItemGroup>
